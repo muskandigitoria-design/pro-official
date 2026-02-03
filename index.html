@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Instant Entry</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+  text-align:center;
+  color:#eafcff;
+  background:linear-gradient(135deg,#020024,#020c2b,#021b3a);
+  overflow:hidden;
+  height:100vh;
+}
+
+/* BACKGROUND */
+.background{
+  position:fixed;
+  inset:0;
+  background:radial-gradient(circle at top,#0a3d62,transparent 60%);
+  z-index:0;
+}
+.overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+  pointer-events:none;
+}
+
+/* FLOATING GLOW ORBS */
+.bubbles span{
+  position:absolute;
+  bottom:-60px;
+  width:18px;height:18px;
+  background:rgba(0,255,204,0.25);
+  border-radius:50%;
+  animation:rise 12s infinite linear;
+}
+.bubbles span:nth-child(2){width:26px;height:26px;left:20%;animation-duration:8s;}
+.bubbles span:nth-child(3){width:36px;height:36px;left:40%;animation-duration:10s;}
+.bubbles span:nth-child(4){width:46px;height:46px;left:60%;animation-duration:7s;}
+.bubbles span:nth-child(5){width:56px;height:56px;left:80%;animation-duration:9s;}
+
+@keyframes rise{
+  0%{bottom:-60px;opacity:0}
+  50%{opacity:1}
+  100%{bottom:110%;opacity:0}
+}
+
+/* CENTER */
+.container{
+  position:relative;
+  z-index:2;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  padding:16px;
+}
+
+/* GLASS CARD */
+.blur-box{
+  background:rgba(10,40,80,0.35);
+  backdrop-filter:blur(14px);
+  border-radius:18px;
+  padding:26px 22px;
+  width:100%;
+  max-width:410px;
+  box-shadow:0 10px 35px rgba(0,255,204,0.25);
+  border:1px solid rgba(0,255,204,0.25);
+}
+
+h1{
+  font-size:14px;
+  letter-spacing:1px;
+  opacity:.85;
+}
+h2{
+  font-size:23px;
+  margin:8px 0 12px;
+  color:#00ffe1;
+}
+
+/* TIMER */
+.timer{
+  font-size:19px;
+  font-weight:700;
+  margin:12px 0;
+  color:#ffd166;
+}
+
+/* PROFILE */
+.profile img{
+  width:140px;
+  border-radius:50%;
+  margin:14px 0;
+  border:3px solid #00ffe1;
+  box-shadow:0 0 20px rgba(0,255,225,0.7);
+}
+
+/* CTA */
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.08)}
+  100%{transform:scale(1)}
+}
+
+.view-btn{
+  display:inline-block;
+  margin-top:14px;
+  padding:13px 26px;
+  border-radius:40px;
+  font-size:14px;
+  font-weight:700;
+  text-decoration:none;
+  color:#021b3a;
+  background:linear-gradient(45deg,#00ffe1,#ffd166);
+  animation:pulse 2.6s infinite;
+  box-shadow:0 0 22px rgba(255,209,102,0.9);
+}
+
+/* TAGLINE */
+h4{
+  margin-top:8px;
+  font-size:15px;
+  color:#00ffe1;
+}
+p{
+  font-size:13px;
+  opacity:.9;
+}
+
+/* FOOTER */
+.footer-text{
+  font-size:11px;
+  margin-top:12px;
+  opacity:.85;
+}
+.disclaimer{
+  font-size:10px;
+  margin-top:10px;
+  color:#ccc;
+}
+
+/* CREDIT */
+.credit{
+  position:fixed;
+  bottom:10px;
+  width:100%;
+  text-align:center;
+  font-size:13px;
+  font-weight:700;
+  color:#00ffe1;
+  z-index:9999;
+}
+.credit a{
+  color:#ffd166;
+  text-decoration:none;
+}
+.credit a:hover{text-decoration:underline;}
+</style>
+</head>
+
+<body>
+
+<div class="background">
+  <div class="overlay"></div>
+  <div class="bubbles">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+</div>
+
+<div class="container">
+  <div class="blur-box">
+
+    <h1>Welcome to</h1>
+    <h2>FOREX GOLD PRO™</h2>
+
+    <div class="timer">
+      Redirecting in <span id="countdown">5</span> seconds
+    </div>
+
+    <div class="profile">
+      <a href="https://t.me/+gpcTClFyoaI3MDFl">
+        <img src="https://thinkbigx.sbs/wp-content/uploads/2026/02/foorxxxx.jpg" alt="Trading Logo">
+      </a>
+    </div>
+
+    <h4>📈 Smart Trades</h4>
+    <p>Discipline • Risk • Growth</p>
+
+    <a href="https://t.me/+gpcTClFyoaI3MDFl" class="view-btn">
+      JOIN TRADING CHANNEL
+    </a>
+
+    <p class="footer-text">📊 Learn • Trade • Grow with Experts</p>
+    <p class="disclaimer">
+      Trading involves market risk. Educational purpose only.
+    </p>
+
+  </div>
+</div>
+
+<div class="credit">
+  ads managed by 
+  <a href="https://t.me/+TRlJl628l-FkMWE9" target="_blank">
+    @Nexgroww_agency
+  </a>
+</div>
+
+</body>
+</html>
